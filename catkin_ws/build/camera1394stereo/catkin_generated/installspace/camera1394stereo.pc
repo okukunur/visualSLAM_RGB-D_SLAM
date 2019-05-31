@@ -1,0 +1,8 @@
+prefix=/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/install
+
+Name: camera1394stereo
+Description: Description of camera1394stereo
+Version: 1.0.6
+Cflags: -I/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/install/include
+Libs: -L/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/install/lib -lcamera1394stereo
+Requires: 

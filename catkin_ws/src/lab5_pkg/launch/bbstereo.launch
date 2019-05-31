@@ -1,0 +1,24 @@
+<launch>
+  <arg name="camera" default="stereo"/>
+  <arg name="base_topic" default="$(arg camera)" />
+  <arg name="manager" default="manager" />
+
+  <node pkg="nodelet" type="nodelet" name="$(arg base_topic)_node"
+      args="load camera1394stereo/driver $(arg manager)">
+    <param name="frame_id" value="$(arg base_topic)_optical" />
+    <param name="camera_info_url_left" value="/path/to/calibration_left.yaml" />
+    <param name="camera_info_url_right" value="/path/to/calibration_right.yaml" />
+    <remap from="stereo_camera" to="$(arg base_topic)" />
+  </node>
+    
+  <!-- Rotate the camera frame. -->
+  <arg name="pi/2" value="1.5707963267948966" />
+  <arg name="optical_rotate" value="0 0 0 -$(arg pi/2) 0 -$(arg pi/2)" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_base_link"
+        args="$(arg optical_rotate) base_link stereo_camera 100" />  
+    
+  <!-- Use direclty "stereo_camera" namespace instead of remappping each message. -->
+  <group ns="/stereo_camera" >   
+    <node pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc"/>
+  </group>
+</launch>

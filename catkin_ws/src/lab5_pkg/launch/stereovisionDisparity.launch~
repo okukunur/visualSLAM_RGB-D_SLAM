@@ -1,0 +1,7 @@
+<launch>
+<!--To view disparity image -->
+     <node pkg="image_view" type="stereo_view" name="" respawn="true" output="screen">
+	<remap from="stereo" 	to="/"/>
+	<remap from="image" 	to="image_rect"/>
+     </node>
+</launch>

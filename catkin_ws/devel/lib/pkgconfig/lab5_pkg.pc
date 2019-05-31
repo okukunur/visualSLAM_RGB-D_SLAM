@@ -1,0 +1,8 @@
+prefix=/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/devel
+
+Name: lab5_pkg
+Description: Description of lab5_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/devel/lib 
+Requires: 

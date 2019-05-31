@@ -1,0 +1,8 @@
+prefix=/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/devel
+
+Name: kinect2_bridge
+Description: Description of kinect2_bridge
+Version: 0.0.1
+Cflags: -I/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/src/iai_kinect2/kinect2_bridge/include
+Libs: -L/home/om/MS/Sem2/EE5531/labs/lab05/hydra/catkin_ws/devel/lib 
+Requires: kinect2_registration
