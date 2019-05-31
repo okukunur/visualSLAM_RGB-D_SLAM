@@ -44,7 +44,7 @@ roslaunch lab5_pkg lab5.launch config:front_bumblebee2
 
 ### Run rviz to visualize the SLAM
 rosrun rviz rviz
-###Open "rtabmap.rviz" in rviz menu in "main/src/lab5_pkg/rviz" folder
+### Open "rtabmap.rviz" in rviz menu in "main/src/lab5_pkg/rviz" folder
 
 ### Teleop functionality to move jackal to map the world 
 ### Navigate slowly for optimal performance
